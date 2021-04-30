@@ -6,6 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { PropTypes } from "prop-types";
 import MathScreen from "./MathScreen";
 import Timer from "./Timer";
+import Calculator from "./Calculator";
 import { Overlay, Input, Button } from "react-native-elements";
 import Modal from "modal-react-native-web";
 
@@ -84,20 +85,18 @@ function DoSomeMath({ navigation }) {
 	);
 }
 
-function PlaceholderTicTacToe({ navigation }) {
+function CalculatorScreen({ navigation }) {
 	return (
 		<View>
+			<Calculator/>
 			<Button
-				style={styles.colorChange}
 				onPress={() => navigation.openDrawer()}
 				title="Open Drawer"
 			/>
 			<Button
-				style={styles.colorChange}
 				onPress={() => navigation.goBack()}
 				title="Go Back Home"
 			/>
-			<ColorShift />
 		</View>
 	);
 }
@@ -145,9 +144,9 @@ export default function App() {
 			<Drawer.Navigator initialRouteName="Home">
 				<Drawer.Screen name="Home" component={HomeScreen} />
 				<Drawer.Screen name="Go Do Some Math" component={DoSomeMath} />
-				<Drawer.Screen name="Color Shift Calculator" component={PlaceholderTicTacToe} />
+				<Drawer.Screen name="Calculator" component={CalculatorScreen} />
 				<Drawer.Screen name="Continuous Timer" component={ContinuousTimer} />
-				<Drawer.Screen name="Something" component={Something} />
+				<Drawer.Screen name="New Calculator" component={Something} />
 			</Drawer.Navigator>
 		</NavigationContainer>
 	);
@@ -182,11 +181,6 @@ const styles = StyleSheet.create({
 		padding: 30,
 		width: "40%",
 		margin: "auto",
-	},
-
-	colorChange: {
-		alignItems: "left",
-		width: "30%",
 	},
 	looks:{
 		backgroundColor: "slategray",
