@@ -1,0 +1,35 @@
+{
+  "files": {
+    "app.js": "/numbers-app/static/js/app.7482fd26.chunk.js",
+    "app.js.map": "/numbers-app/static/js/app.7482fd26.chunk.js.map",
+    "runtime~app.js": "/numbers-app/static/js/runtime~app.a4d290d3.js",
+    "runtime~app.js.map": "/numbers-app/static/js/runtime~app.a4d290d3.js.map",
+    "static/js/2.969267c6.chunk.js": "/numbers-app/static/js/2.969267c6.chunk.js",
+    "static/js/2.969267c6.chunk.js.map": "/numbers-app/static/js/2.969267c6.chunk.js.map",
+    "fonts/AntDesign.ttf": "/numbers-app/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/numbers-app/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/numbers-app/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/numbers-app/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/numbers-app/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/numbers-app/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/numbers-app/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/numbers-app/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/numbers-app/./fonts/Ionicons.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/numbers-app/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/numbers-app/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/numbers-app/./fonts/SimpleLineIcons.ttf",
+    "index.html": "/numbers-app/index.html",
+    "manifest.json": "/numbers-app/manifest.json",
+    "serve.json": "/numbers-app/serve.json",
+    "static/js/2.969267c6.chunk.js.LICENSE.txt": "/numbers-app/static/js/2.969267c6.chunk.js.LICENSE.txt",
+    "static/media/bell.png": "/numbers-app/static/media/bell.cf04af27.png",
+    "static/media/heart.png": "/numbers-app/static/media/heart.23b5c2c0.png",
+    "static/media/rocket.png": "/numbers-app/static/media/rocket.d2f3bf41.png",
+    "static/media/star.png": "/numbers-app/static/media/star.69c71386.png"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.a4d290d3.js",
+    "static/js/2.969267c6.chunk.js",
+    "static/js/app.7482fd26.chunk.js"
+  ]
+}
