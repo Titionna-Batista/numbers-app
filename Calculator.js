@@ -58,10 +58,11 @@ export default function Calculator() {
     }
     
     return(
+            <Card>
         <View>
-            <TextInput style={styles.input } onChangeText={(text) => setNumbers({...numbers, numberOne: parseInt(text)})}/>
+            <TextInput style={styles.input} onChangeText={(text) => setNumbers({...numbers, numberOne: parseInt(text)})}/>
             
-            <RNPickerSelect
+            <RNPickerSelect style={pickerSelectStyles.picker}
             placeholder={placeholder}
             items={symbols}
             onValueChange={(text) => 
@@ -70,33 +71,60 @@ export default function Calculator() {
                     payload: { numberOne: numbers.numberOne, numberTwo: numbers.numberTwo }
                   })  
                 }
-            // style={pickerSelectStyles}
+            // 
           /> 
         <View>
-            <TextInput style={styles.input} onChangeText={(text) => setNumbers({...numbers, numberTwo: parseInt(text)})}/>
+            <TextInput style={styles.inputtwo} onChangeText={(text) => setNumbers({...numbers, numberTwo: parseInt(text)})}/>
   </View>
-            <Card>
             {/* <View style="sumsymbol">  */}
-            <Text> equals {result}</Text> 
+            <Text style={styles.result}> equals {result}</Text> 
             {/* </View> */}
-            </Card>
 
         </View>
+            </Card>
     )
 }
 const styles = StyleSheet.create({
  input: {
      marginTop: 20,
      marginBottom: 10,
-     width: "50%",
+     width: "20%",
+     height: "45%",
      margin: "auto",
-     borderColor: "red",
+     borderColor: "slategray",
      borderWidth: 3,
+     textAlign: "center",
+     fontSize: 40,
+     padding: 20,
+ },
+ inputtwo: {
+     marginTop: 10,
+     marginBottom: 30,
+    borderColor: "slategray",
+    borderWidth: 3,
+    padding: 30,
+    width: "20%",
+    height: "55%",
+    textAlign: "center",
+    margin: "auto",
+    fontSize: 40,
+ },
+ result: {
+     fontSize: 60,
+     backgroundColor: "lightblue",
+     textAlign: "center",
+ },
+ picker: {
+     
  }
  })
 
 
-// const pickerSelectStyles = StyleSheet.create({
+const pickerSelectStyles = StyleSheet.create({
+    picker: {
+ width: "20%",
+ height: 40,
+ textAlign: "center",
+    },
 
-
-// })
+ })
