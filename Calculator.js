@@ -3,7 +3,7 @@ import {useReducer, useState, useRef} from "react";
 import {View, StyleSheet, Text} from "react-native";
 import {Card} from "react-native-elements";
 import { TextInput } from "react-native-gesture-handler";
-import RNPickerSelect, {defaultStyles} from "react-native-picker-select";
+import RNPickerSelect from "react-native-picker-select";
 
 export default function Calculator() {
     const [numbers, setNumbers] = useState({
