@@ -189,6 +189,6 @@ const styles = StyleSheet.create({
 		width: "30%",
 	},
 	looks:{
-		backgroundColor: "pink",
+		backgroundColor: "slategray",
 	},
 });
