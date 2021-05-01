@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/numbers-app/static/js/app.7482fd26.chunk.js",
-    "app.js.map": "/numbers-app/static/js/app.7482fd26.chunk.js.map",
+    "app.js": "/numbers-app/static/js/app.dd1bfb09.chunk.js",
+    "app.js.map": "/numbers-app/static/js/app.dd1bfb09.chunk.js.map",
     "runtime~app.js": "/numbers-app/static/js/runtime~app.a4d290d3.js",
     "runtime~app.js.map": "/numbers-app/static/js/runtime~app.a4d290d3.js.map",
-    "static/js/2.969267c6.chunk.js": "/numbers-app/static/js/2.969267c6.chunk.js",
-    "static/js/2.969267c6.chunk.js.map": "/numbers-app/static/js/2.969267c6.chunk.js.map",
+    "static/js/2.72cb0185.chunk.js": "/numbers-app/static/js/2.72cb0185.chunk.js",
+    "static/js/2.72cb0185.chunk.js.map": "/numbers-app/static/js/2.72cb0185.chunk.js.map",
     "fonts/AntDesign.ttf": "/numbers-app/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/numbers-app/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/numbers-app/./fonts/Feather.ttf",
@@ -21,15 +21,17 @@
     "index.html": "/numbers-app/index.html",
     "manifest.json": "/numbers-app/manifest.json",
     "serve.json": "/numbers-app/serve.json",
-    "static/js/2.969267c6.chunk.js.LICENSE.txt": "/numbers-app/static/js/2.969267c6.chunk.js.LICENSE.txt",
+    "static/js/2.72cb0185.chunk.js.LICENSE.txt": "/numbers-app/static/js/2.72cb0185.chunk.js.LICENSE.txt",
     "static/media/bell.png": "/numbers-app/static/media/bell.cf04af27.png",
+    "static/media/betterPicture.jpg": "/numbers-app/static/media/betterPicture.2ba9877d.jpg",
     "static/media/heart.png": "/numbers-app/static/media/heart.23b5c2c0.png",
+    "static/media/linkedinicon.jpg": "/numbers-app/static/media/linkedinicon.6d365ade.jpg",
     "static/media/rocket.png": "/numbers-app/static/media/rocket.d2f3bf41.png",
     "static/media/star.png": "/numbers-app/static/media/star.69c71386.png"
   },
   "entrypoints": [
     "static/js/runtime~app.a4d290d3.js",
-    "static/js/2.969267c6.chunk.js",
-    "static/js/app.7482fd26.chunk.js"
+    "static/js/2.72cb0185.chunk.js",
+    "static/js/app.dd1bfb09.chunk.js"
   ]
 }
