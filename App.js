@@ -33,7 +33,7 @@ function HomeScreen({ navigation }) {
 					<Text style={styles.title}> Welcome, {username}</Text>
 					<Text style={styles.secondary}> Let's mess with math! </Text>
 					<Card style={styles.modalCard}>
-						<Text> I want to put something in here.</Text>
+						<Text> Please enjoy your time here.</Text>
 					</Card>
 					<Button
 						style={styles.button}
