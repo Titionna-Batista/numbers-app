@@ -7,6 +7,7 @@ import { PropTypes } from "prop-types";
 import MathScreen from "./MathScreen";
 import Timer from "./Timer";
 import Calculator from "./Calculator";
+import AboutMe from "./Card";
 import { Overlay, Input, Button } from "react-native-elements";
 import Modal from "modal-react-native-web";
 
@@ -119,34 +120,40 @@ function ContinuousTimer({ navigation }) {
 	);
 }
 
-function Something({ navigation }) {
+function ColorShiftScreen ({ navigation }) {
 	return (
 		<View>
+			<ColorShift/>
+		</View>
+	)
+}
+
+
+function MyInfo({ navigation }) {
+	return (
+		<View>
+			<AboutMe/>
 			<Button
 				style={styles.button}
 				onPress={() => navigation.openDrawer()}
 				title="Open Drawer"
 			/>
-			<Button
-				style={styles.button}
-				onPress={() => navigation.goBack()}
-				title="Go Back Home"
-			/>
 		</View>
 	);
 }
+
 
 const Drawer = createDrawerNavigator();
 
 export default function App() {
 	return (
 		<NavigationContainer>
-			<Drawer.Navigator initialRouteName="Home">
+			<Drawer.Navigator initialRouteName="About Me"> 
 				<Drawer.Screen name="Home" component={HomeScreen} />
 				<Drawer.Screen name="Go Do Some Math" component={DoSomeMath} />
 				<Drawer.Screen name="Calculator" component={CalculatorScreen} />
 				<Drawer.Screen name="Continuous Timer" component={ContinuousTimer} />
-				<Drawer.Screen name="New Calculator" component={Something} />
+				<Drawer.Screen name="About Me" component={MyInfo}/>
 			</Drawer.Navigator>
 		</NavigationContainer>
 	);
