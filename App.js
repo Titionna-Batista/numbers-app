@@ -149,7 +149,7 @@ const Drawer = createDrawerNavigator();
 export default function App() {
 	return (
 		<NavigationContainer>
-			<Drawer.Navigator initialRouteName="Continuous Timer"> 
+			<Drawer.Navigator initialRouteName="Home"> 
 				<Drawer.Screen name="Home" component={HomeScreen} />
 				<Drawer.Screen name="Go Do Some Math" component={DoSomeMath} />
 				<Drawer.Screen name="Calculator" component={CalculatorScreen} />
