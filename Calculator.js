@@ -49,7 +49,6 @@ export default function Calculator() {
         }
     }, "");
 
-    console.log(result)
     
     const placeholder = {
       label: "Choose a function",
@@ -58,11 +57,11 @@ export default function Calculator() {
     }
     
     return(
-            <Card>
+            <Card containerStyle = {styles.cardColor}>
         <View>
-            <TextInput style={styles.input} onChangeText={(text) => setNumbers({...numbers, numberOne: parseInt(text)})}/>
+            <TextInput style={styles.input} placeholder="#" onChangeText={(text) => setNumbers({...numbers, numberOne: parseInt(text)})}/>
             
-            <RNPickerSelect style={pickerSelectStyles.picker}
+            <RNPickerSelect style={pickerStyle}
             placeholder={placeholder}
             items={symbols}
             onValueChange={(text) => 
@@ -74,11 +73,10 @@ export default function Calculator() {
             // 
           /> 
         <View>
-            <TextInput style={styles.inputtwo} onChangeText={(text) => setNumbers({...numbers, numberTwo: parseInt(text)})}/>
-  </View>
-            {/* <View style="sumsymbol">  */}
-            <Text style={styles.result}> equals {result}</Text> 
-            {/* </View> */}
+            <TextInput style={styles.inputtwo} placeholder="#" onChangeText={(text) => setNumbers({...numbers, numberTwo: parseInt(text)})}/>
+        </View>
+            
+            <Text style={styles.result}> = {result}</Text> 
 
         </View>
             </Card>
@@ -111,20 +109,39 @@ const styles = StyleSheet.create({
  },
  result: {
      fontSize: 60,
-     backgroundColor: "lightblue",
+     backgroundColor: "white",
      textAlign: "center",
+     width: "50%",
+     margin: "auto",
+     borderWidth: 2,
+     borderColor: "gray",
+     borderTopLeftRadius: 2,
  },
- picker: {
-     
- }
- })
+ cardColor: {
+     backgroundColor: "lightblue",
+ },
+ });
 
 
-const pickerSelectStyles = StyleSheet.create({
+const pickerStyle = StyleSheet.create({
     picker: {
- width: "20%",
- height: 40,
- textAlign: "center",
+        width: "20%",
+        height: 40,
+        textAlign: "center",
     },
-
- })
+        inputIOS: {
+            color: 'white',
+            paddingHorizontal: 10,
+            backgroundColor: 'red',
+            borderRadius: 5,
+        },
+        placeholder: {
+            color: 'gray',
+          },
+        inputAndroid: {
+            color: 'white',
+            paddingHorizontal: 10,
+            backgroundColor: 'red',
+            borderRadius: 5,
+        },
+ });

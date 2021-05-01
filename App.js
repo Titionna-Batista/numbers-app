@@ -8,48 +8,57 @@ import MathScreen from "./MathScreen";
 import Timer from "./Timer";
 import Calculator from "./Calculator";
 import AboutMe from "./Card";
-import { Overlay, Input, Button } from "react-native-elements";
+import { Overlay, Input, Button, Card } from "react-native-elements";
 import Modal from "modal-react-native-web";
 
 function HomeScreen({ navigation }) {
 	const [showLogin, setShowLogin] = useState(false);
 	const [login, setLogin] = useState(false);
 	const [username, setUsername] = useState("");
+	const [password, setPassword] = useState("");
 
 	return (
 		<View style={styles.looks}>
 			{!login ? (
 				<>
-					<Text style={styles.title}> Welcome! Please Enter Your Name.</Text>
+					<Text style={styles.title}> Welcome! Please Login to continue.</Text>
 					<Button
 						style={styles.button}
 						onPress={() => setShowLogin(true)}
-						title="Enter Name"
+						title="Login"
 					/>
 				</>
 			) : (
 				<>
-					<Text style={styles.title}> Hello, {username}</Text>
+					<Text style={styles.title}> Welcome, {username}</Text>
 					<Text style={styles.secondary}> Let's mess with math! </Text>
+					<Card style={styles.modalCard}>
+						<Text> I want to put something in here.</Text>
+					</Card>
 					<Button
 						style={styles.button}
 						onPress={() => setLogin(false)}
-						title="Wipe Name"
+						title="Logout"
 					/>
-				</>
-			)}
-
 			<Button
 				style={styles.homeButton}
 				onPress={() => navigation.openDrawer()}
 				title="Open Left Drawer"
 			/>
-			<Overlay isVisible={showLogin} ModalComponent={Modal}>
-				<Text>Please Enter Your Name</Text>
-				<Input
-					title="Username"
+				</>
+			)}
+
+			<Overlay isVisible={showLogin} ModalComponent={Modal} style={styles.modal}>
+				<Text style={styles.modaltext}>Login</Text>
+				<Input style = {styles.logininput}
+					label="Username"
 					value={username}
 					onChangeText={(un) => setUsername(un)}
+				></Input>
+				<Input style = {styles.logininput}
+					label="Password"
+					value={password}
+					onChangeText={(pw) => setPassword(pw)}
 				></Input>
 
 				<Button
@@ -80,7 +89,7 @@ function DoSomeMath({ navigation }) {
 			<Button
 				style={styles.dosomemathback}
 				onPress={() => navigation.goBack()}
-				title="Go Back Home"
+				title="Return to Previous"
 			/>
 		</View>
 	);
@@ -96,7 +105,7 @@ function CalculatorScreen({ navigation }) {
 			/>
 			<Button
 				onPress={() => navigation.goBack()}
-				title="Go Back Home"
+				title="Return to Previous"
 			/>
 		</View>
 	);
@@ -114,18 +123,10 @@ function ContinuousTimer({ navigation }) {
 			<Button
 				style={styles.calButt}
 				onPress={() => navigation.goBack()}
-				title="Go Back Home" 
+				title="Return to Previous" 
 			/>
 		</View>
 	);
-}
-
-function ColorShiftScreen ({ navigation }) {
-	return (
-		<View>
-			<ColorShift/>
-		</View>
-	)
 }
 
 
@@ -148,7 +149,7 @@ const Drawer = createDrawerNavigator();
 export default function App() {
 	return (
 		<NavigationContainer>
-			<Drawer.Navigator initialRouteName="About Me"> 
+			<Drawer.Navigator initialRouteName="Continuous Timer"> 
 				<Drawer.Screen name="Home" component={HomeScreen} />
 				<Drawer.Screen name="Go Do Some Math" component={DoSomeMath} />
 				<Drawer.Screen name="Calculator" component={CalculatorScreen} />
@@ -164,6 +165,7 @@ const styles = StyleSheet.create({
 		fontSize: 40,
 		margin: "auto",
 		padding: 2,
+		fontFamily: "Lilita One"
 	},
 	secondary: {
 		fontSize: 30,
@@ -173,6 +175,7 @@ const styles = StyleSheet.create({
 		width: "50%",
 		margin: "auto",
 		paddingTop: 10,
+		paddingBottom: 20,
 	},
 	calButt: {
 		width: "100%",
@@ -192,4 +195,14 @@ const styles = StyleSheet.create({
 	looks:{
 		backgroundColor: "slategray",
 	},
+	modalCard: {
+		width: "50%",
+	},
+	logininput: {
+		borderWidth: 3,
+		borderColor: "gray",
+		borderRadius: 5,
+		marginBottom: 3,
+		marginTop: 3,
+	}
 });

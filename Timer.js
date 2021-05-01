@@ -1,6 +1,6 @@
 import React, { useReducer, useEffect } from "react";
 import { StyleSheet, Text, SafeAreaView, View } from "react-native";
-import { Button } from "react-native-elements";
+import { Button, Card } from "react-native-elements";
 
 let patchCall = "startCount"
 
@@ -89,15 +89,17 @@ const Timer = () => {
 
 	return (
 		<SafeAreaView>
+			<Card>
 			<Text style={styles.text}>
 				{" "}
-				You have been on this site for {state.seconds} seconds.
+				You have been on this page for {state.seconds} seconds.
 			</Text>
 			<View style={[{ flexDirection: "row" }, { margin: "auto" }]}>
 				<StartCount />
 				<StopCount />
 			</View>
 			<ResetCount />
+			</Card>
 		</SafeAreaView>
 	);
 };
