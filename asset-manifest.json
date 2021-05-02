@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/numbers-app/static/js/app.0d8d1bab.chunk.js",
-    "app.js.map": "/numbers-app/static/js/app.0d8d1bab.chunk.js.map",
+    "app.js": "/numbers-app/static/js/app.445d8c57.chunk.js",
+    "app.js.map": "/numbers-app/static/js/app.445d8c57.chunk.js.map",
     "runtime~app.js": "/numbers-app/static/js/runtime~app.a4d290d3.js",
     "runtime~app.js.map": "/numbers-app/static/js/runtime~app.a4d290d3.js.map",
     "static/js/2.5be20de7.chunk.js": "/numbers-app/static/js/2.5be20de7.chunk.js",
@@ -32,6 +32,6 @@
   "entrypoints": [
     "static/js/runtime~app.a4d290d3.js",
     "static/js/2.5be20de7.chunk.js",
-    "static/js/app.0d8d1bab.chunk.js"
+    "static/js/app.445d8c57.chunk.js"
   ]
 }
