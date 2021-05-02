@@ -57,6 +57,7 @@ function HomeScreen({ navigation }) {
 				></Input>
 				<Input style = {styles.logininput}
 					label="Password"
+					secureTextEntry = {true}
 					value={password}
 					onChangeText={(pw) => setPassword(pw)}
 				></Input>
