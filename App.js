@@ -33,18 +33,18 @@ function HomeScreen({ navigation }) {
 					<Text style={styles.title}> Welcome, {username}</Text>
 					<Text style={styles.secondary}> Let's mess with math! </Text>
 					<Card style={styles.modalCard}>
-						<Text> Please enjoy your time here.</Text>
+						<Text style={styles.centerpiece}> Click on the Drawer Button to see more content.</Text>
 					</Card>
-					<Button
-						style={styles.button}
-						onPress={() => setLogin(false)}
-						title="Logout"
-					/>
 			<Button
 				style={styles.homeButton}
 				onPress={() => navigation.openDrawer()}
 				title="Open Left Drawer"
 			/>
+					<Button
+						style={styles.buttonleave}
+						onPress={() => setLogin(false)}
+						title="Logout"
+					/>
 				</>
 			)}
 
@@ -205,5 +205,14 @@ const styles = StyleSheet.create({
 		borderRadius: 5,
 		marginBottom: 3,
 		marginTop: 3,
-	}
+	},
+	centerpiece: {
+		fontsize: 25,
+		fontStyle: "italic",
+		textAlign: "center",
+	},
+	buttonleave: {
+		width: "10%",
+		margin: "auto",
+	},
 });
