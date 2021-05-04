@@ -69,8 +69,7 @@ export default function Calculator() {
                     operation: text,
                     payload: { numberOne: numbers.numberOne, numberTwo: numbers.numberTwo }
                   })  
-                }
-            // 
+                } 
           /> 
         <View>
             <TextInput style={styles.inputtwo} placeholder="#" onChangeText={(text) => setNumbers({...numbers, numberTwo: parseInt(text)})}/>
